@@ -1,7 +1,7 @@
 const OurTeam = () => {
   return (
-    <section id="our-team" className="py-20 px-6 bg-secondary/30">
-      <div className="max-w-7xl mx-auto">
+    <section id="our-team" className="min-h-screen py-20 px-6 bg-secondary/30 flex items-center">
+      <div className="max-w-7xl mx-auto w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Our Team

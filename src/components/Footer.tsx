@@ -11,8 +11,8 @@ import {
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-gray-900 text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
+    <footer id="contact" className="min-h-screen bg-gray-900 text-white py-16 px-6 flex items-center">
+      <div className="max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <div className="flex items-center gap-2">

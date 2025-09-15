@@ -37,8 +37,8 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
+    <section id="services" className="min-h-screen py-20 px-6 bg-background flex items-center">
+      <div className="max-w-7xl mx-auto w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Our Services

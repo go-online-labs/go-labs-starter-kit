@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const CallToAction = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-cta relative overflow-hidden">
+    <section className="min-h-screen py-20 px-6 bg-gradient-cta relative overflow-hidden flex items-center">
       <div className="max-w-4xl mx-auto text-center text-white relative z-10">
         <h2 className="text-4xl lg:text-5xl font-bold mb-6">
           Ready to Get Your Business Live?
