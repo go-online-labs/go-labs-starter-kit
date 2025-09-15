@@ -93,12 +93,8 @@ const Footer = () => {
                 <span>hello@getuslive.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />
-                <span>123 Digital Ave, Tech City, TC 12345</span>
+                <span>Canada</span>
               </div>
             </div>
           </div>
@@ -107,7 +103,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2024 Get Us Live. All rights reserved.
+              © 2025 Get Us Live. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">

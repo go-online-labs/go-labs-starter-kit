@@ -19,8 +19,8 @@ const Header = () => {
 
   const navItems = [
     { label: "Services", id: "services" },
-    { label: "Projects", id: "projects" },
-    { label: "Testimonials", id: "testimonials" },
+    { label: "Our Team", id: "our-team" },
+    // { label: "Testimonials", id: "testimonials" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -54,7 +54,7 @@ const Header = () => {
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            Get Started
+            Get Quote
           </Button>
         </div>
 
@@ -89,7 +89,7 @@ const Header = () => {
               size="lg"
               className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90"
             >
-              Get Started
+              Get Quote
             </Button>
           </nav>
         </div>
