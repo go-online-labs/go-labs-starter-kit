@@ -1,8 +1,16 @@
 import { Button } from "@/components/ui/button";
 
 const CallToAction = () => {
+  const mailTo = () => {
+    window.location.assign(
+      "mailto:contact@getuslive.com?subject=Inquiry about"
+    );
+  };
   return (
-    <section id="contact" className="py-20 px-6 bg-gradient-cta relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-20 px-6 bg-gradient-cta relative overflow-hidden"
+    >
       <div className="max-w-4xl mx-auto text-center text-white relative z-10">
         <h2 className="text-4xl lg:text-5xl font-bold mb-6">
           Ready to Get Your Business Live?
@@ -15,6 +23,7 @@ const CallToAction = () => {
           <Button
             size="lg"
             className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg font-semibold"
+            onClick={mailTo}
           >
             Get Quote
           </Button>

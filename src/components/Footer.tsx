@@ -16,8 +16,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-                <CheckSquare className="w-5 h-5 text-white" />
+              <div className="rounded flex items-center justify-center">
+                <img
+                  src="/src/assets/logo.png"
+                  className="w-12 rounded text-primary-foreground"
+                />
               </div>
               <span className="text-xl font-bold">Get Us Live</span>
             </div>
@@ -90,7 +93,9 @@ const Footer = () => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4" />
-                <span>hello@getuslive.com</span>
+                <a href="mailto:contact@getuslive.com?subject=Inquiry about">
+                  contact@getuslive.com
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />
