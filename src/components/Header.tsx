@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logoImage from "@/assets/logo.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ const Header = () => {
         >
           <div className="rounded flex items-center justify-center">
             <img
-              src="/src/assets/logo.png"
+              src={logoImage}
               className="w-12 rounded text-primary-foreground"
             />
           </div>

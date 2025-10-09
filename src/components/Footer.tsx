@@ -1,5 +1,4 @@
 import {
-  CheckSquare,
   Facebook,
   Twitter,
   Linkedin,
@@ -8,6 +7,7 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import logoImage from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <div className="rounded flex items-center justify-center">
                 <img
-                  src="/src/assets/logo.png"
+                  src={logoImage}
                   className="w-12 rounded text-primary-foreground"
                 />
               </div>
