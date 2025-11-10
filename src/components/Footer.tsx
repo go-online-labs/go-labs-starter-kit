@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="rounded flex items-center justify-center">
                 <img
                   src={logoImage}
-                  className="w-12 rounded text-primary-foreground"
+                  className="w-12 rounded text-primary-foreground [padding:0_0_5px_10px]"
                 />
               </div>
               <span className="text-xl font-bold">Get Us Live</span>
