@@ -1,17 +1,17 @@
-import { TrendingUp, Code, Search, Check } from "lucide-react";
+import { Code, Search, Check, Terminal } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: TrendingUp,
-      title: "Performance Marketing",
+      icon: Terminal,
+      title: "Contract Programming",
       description:
-        "Drive targeted traffic and maximize ROI with our data-driven marketing campaigns across all digital channels.",
+        "Deploy expert developers and accelerate delivery with our flexible contract programming services across all modern tech stacks.",
       color: "service-marketing",
       features: [
-        "Google Ads Management",
-        "Social Media Advertising",
-        "Conversion Optimization",
+        "Flexible Team Scaling",
+        "Expert Developers",
+        "Seamless Integration",
       ],
     },
     {
