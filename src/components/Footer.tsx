@@ -1,6 +1,4 @@
 import {
-  Facebook,
-  Twitter,
   Linkedin,
   Instagram,
   Mail,
@@ -10,6 +8,21 @@ import {
 import logoImage from "@/assets/logo-transparent.png";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
+
+  const socialLinks = [
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/company/getuslive/",
+      Icon: Linkedin,
+    },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/getuslive/",
+      Icon: Instagram,
+    },
+  ]
+
   return (
     <footer className="bg-gray-900 text-white py-16 px-6">
       <div className="max-w-7xl mx-auto">
@@ -28,12 +41,22 @@ const Footer = () => {
               Transforming businesses through innovative digital solutions and
               performance-driven marketing strategies.
             </p>
-            <div className="flex items-center gap-4">
-              <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-            </div>
+            {socialLinks.length > 0 && (
+              <div className="flex items-center gap-4">
+                {socialLinks.map(({ label, href, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Get Us Live on ${label}`}
+                    className="inline-flex"
+                  >
+                    <Icon className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           <div>
@@ -108,7 +131,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2025 Get Us Live. All rights reserved.
+              © {currentYear} GetUsLive Solutions Inc. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">
