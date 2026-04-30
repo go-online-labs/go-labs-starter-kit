@@ -5,20 +5,29 @@ import {
   
   MapPin,
 } from "lucide-react";
+import { Link } from "react-router-dom"
 import logoImage from "@/assets/logo-transparent.png";
+import { EXTERNAL_LINKS } from "@/config/externalLinks"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   const socialLinks = [
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/company/getuslive/",
+      href: EXTERNAL_LINKS.linkedinCompany,
       Icon: Linkedin,
     },
     {
       label: "Instagram",
-      href: "https://www.instagram.com/getuslive/",
+      href: EXTERNAL_LINKS.instagram,
       Icon: Instagram,
     },
   ]
@@ -63,22 +72,50 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("services")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   Contract Programming
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("services")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   Website Development
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("services")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   SEO Optimization
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("services")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   Social Media Marketing
                 </a>
               </li>
@@ -89,23 +126,37 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#our-team"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("our-team")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#our-team"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("our-team")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   Our Team
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href={EXTERNAL_LINKS.linkedinCompany}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white transition-colors"
+                >
                   Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Blog
                 </a>
               </li>
             </ul>
@@ -134,15 +185,9 @@ const Footer = () => {
               © {currentYear} GetUsLive Solutions Inc. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">
+              <Link to="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
