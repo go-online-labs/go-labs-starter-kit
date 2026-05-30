@@ -1,15 +1,37 @@
 import {
-  Facebook,
-  Twitter,
   Linkedin,
   Instagram,
   Mail,
   
   MapPin,
 } from "lucide-react";
+import { Link } from "react-router-dom"
 import logoImage from "@/assets/logo-transparent.png";
+import { EXTERNAL_LINKS } from "@/config/externalLinks"
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  const socialLinks = [
+    {
+      label: "LinkedIn",
+      href: EXTERNAL_LINKS.linkedinCompany,
+      Icon: Linkedin,
+    },
+    {
+      label: "Instagram",
+      href: EXTERNAL_LINKS.instagram,
+      Icon: Instagram,
+    },
+  ]
+
   return (
     <footer className="bg-gray-900 text-white py-16 px-6">
       <div className="max-w-7xl mx-auto">
@@ -28,34 +50,72 @@ const Footer = () => {
               Transforming businesses through innovative digital solutions and
               performance-driven marketing strategies.
             </p>
-            <div className="flex items-center gap-4">
-              <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-            </div>
+            {socialLinks.length > 0 && (
+              <div className="flex items-center gap-4">
+                {socialLinks.map(({ label, href, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Get Us Live on ${label}`}
+                    className="inline-flex"
+                  >
+                    <Icon className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("services")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   Contract Programming
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("services")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   Website Development
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("services")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   SEO Optimization
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("services")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   Social Media Marketing
                 </a>
               </li>
@@ -66,23 +126,37 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#our-team"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("our-team")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#our-team"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("our-team")
+                  }}
+                  className="hover:text-white transition-colors"
+                >
                   Our Team
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href={EXTERNAL_LINKS.linkedinCompany}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white transition-colors"
+                >
                   Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Blog
                 </a>
               </li>
             </ul>
@@ -108,18 +182,12 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2025 Get Us Live. All rights reserved.
+              © {currentYear} GetUsLive Solutions Inc. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">
+              <Link to="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
