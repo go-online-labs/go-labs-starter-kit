@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-laptops.jpg";
 
 const Hero = () => {
+  const scrollToProjects = () => {
+    const element = document.getElementById("projects")
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 py-20 flex items-center min-h-screen">
@@ -25,6 +32,7 @@ const Hero = () => {
                 size="lg"
                 variant="hero"
                 className="px-8 py-6 text-lg font-semibold"
+                onClick={scrollToProjects}
               >
                 View Our Work
               </Button>
