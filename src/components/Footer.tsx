@@ -1,17 +1,23 @@
-import { Linkedin, Instagram, Mail, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import {
+  Linkedin,
+  Instagram,
+  Mail,
+  
+  MapPin,
+} from "lucide-react";
+import { Link } from "react-router-dom"
 import logoImage from "@/assets/logo-transparent.png";
-import { EXTERNAL_LINKS } from "@/config/externalLinks";
+import { EXTERNAL_LINKS } from "@/config/externalLinks"
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+    const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
 
   const socialLinks = [
     {
@@ -24,7 +30,7 @@ const Footer = () => {
       href: EXTERNAL_LINKS.instagram,
       Icon: Instagram,
     },
-  ];
+  ]
 
   return (
     <footer className="bg-gray-900 text-white py-16 px-6">
@@ -41,8 +47,8 @@ const Footer = () => {
               <span className="text-xl font-bold">Get Us Live</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Transforming businesses through innovative digital solutions. We
-              audit AI-generated codebases, fix what's broken, and build
+              Transforming businesses through innovative digital solutions.
+              We audit AI-generated codebases, fix what's broken, and build
               production-ready web applications.
             </p>
             {socialLinks.length > 0 && (
@@ -70,8 +76,8 @@ const Footer = () => {
                 <a
                   href="#services"
                   onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("services");
+                    e.preventDefault()
+                    scrollToSection("services")
                   }}
                   className="hover:text-white transition-colors"
                 >
@@ -82,8 +88,8 @@ const Footer = () => {
                 <a
                   href="#services"
                   onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("services");
+                    e.preventDefault()
+                    scrollToSection("services")
                   }}
                   className="hover:text-white transition-colors"
                 >
@@ -94,8 +100,8 @@ const Footer = () => {
                 <a
                   href="#services"
                   onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("services");
+                    e.preventDefault()
+                    scrollToSection("services")
                   }}
                   className="hover:text-white transition-colors"
                 >
@@ -112,8 +118,8 @@ const Footer = () => {
                 <a
                   href="#our-team"
                   onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("our-team");
+                    e.preventDefault()
+                    scrollToSection("our-team")
                   }}
                   className="hover:text-white transition-colors"
                 >
@@ -124,8 +130,8 @@ const Footer = () => {
                 <a
                   href="#our-team"
                   onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("our-team");
+                    e.preventDefault()
+                    scrollToSection("our-team")
                   }}
                   className="hover:text-white transition-colors"
                 >
@@ -156,7 +162,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />
-                <span> Canada 🇨🇦 | India 🇮🇳 </span>
+                <span>Canada</span>
               </div>
             </div>
           </div>
@@ -168,10 +174,7 @@ const Footer = () => {
               © {currentYear} GetUsLive Solutions Inc. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-400">
-              <Link
-                to="/privacy"
-                className="hover:text-white transition-colors"
-              >
+              <Link to="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
             </div>
