@@ -13,8 +13,8 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <VibecodeAudit />
       <Services />
+      <VibecodeAudit />
       <Projects />
       <OurTeam />
       {/* <Testimonials /> */}
