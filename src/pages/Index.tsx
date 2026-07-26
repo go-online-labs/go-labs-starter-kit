@@ -13,9 +13,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
+      <VibecodeAudit />
       <Services />
       <Projects />
-      <VibecodeAudit />
       <OurTeam />
       {/* <Testimonials /> */}
       <CallToAction />

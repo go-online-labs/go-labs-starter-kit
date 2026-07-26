@@ -15,11 +15,12 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           <div className="text-white space-y-8">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Bring Your Business <span className="text-cyan-300">Online</span>
+              We Audit & Fix <span className="text-cyan-300">AI-Generated Code</span>
             </h1>
             <p className="text-xl text-white/90 leading-relaxed max-w-lg">
-              We specialize in performance marketing, website development, and
-              SEO to help your business thrive in the digital world.
+              Built something with Cursor, Copilot, or vibecoding? We review
+              the codebase, fix what's broken, and ship it production-ready.
+              Also available for contract web development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
