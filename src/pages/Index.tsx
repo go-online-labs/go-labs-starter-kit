@@ -14,8 +14,8 @@ const Index = () => {
       <Header />
       <Hero />
       <Services />
-      <Projects />
       <VibecodeAudit />
+      <Projects />
       <OurTeam />
       {/* <Testimonials /> */}
       <CallToAction />

@@ -47,8 +47,9 @@ const Footer = () => {
               <span className="text-xl font-bold">Get Us Live</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Transforming businesses through innovative digital solutions and
-              performance-driven marketing strategies.
+              Transforming businesses through innovative digital solutions.
+              We audit AI-generated codebases, fix what's broken, and build
+              production-ready web applications.
             </p>
             {socialLinks.length > 0 && (
               <div className="flex items-center gap-4">
@@ -107,18 +108,6 @@ const Footer = () => {
                   SEO Optimization
                 </a>
               </li>
-              <li>
-                <a
-                  href="#services"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    scrollToSection("services")
-                  }}
-                  className="hover:text-white transition-colors"
-                >
-                  Social Media Marketing
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -173,7 +162,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />
-                <span>Canada</span>
+                <span>Canada 🇨🇦</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-4 h-4" />
+                <span>India 🇮🇳</span>
               </div>
             </div>
           </div>

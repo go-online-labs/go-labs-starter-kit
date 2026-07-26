@@ -18,8 +18,9 @@ const Hero = () => {
               Bring Your Business <span className="text-cyan-300">Online</span>
             </h1>
             <p className="text-xl text-white/90 leading-relaxed max-w-lg">
-              We specialize in performance marketing, website development, and
-              SEO to help your business thrive in the digital world.
+              We audit and fix AI-generated code, build websites, and develop
+              products to help your business thrive. From vibecoded project
+              rescues to contract web development — we ship it production-ready.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
