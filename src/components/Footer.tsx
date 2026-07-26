@@ -162,7 +162,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />
-                <span>Canada</span>
+                <span> Canada 🇨🇦 | India 🇮🇳 </span>
               </div>
             </div>
           </div>
